@@ -1,0 +1,58 @@
+#!/usr/bin/env zsh
+
+# usage: bad_msg "some bad message"
+# $?: return code, 0 = success, non-zero = failure
+# stdout: the message with formatting to communicate it is bad
+bad_msg() {
+  msg=$1
+  echo -e "\e[1;31m \n${msg}\n \e[0m"
+}
+
+# Display the given <msg> as a failure message & exit the script with the
+# given <exit-code> if the provided <result-to-evaluate> is NOT 0.
+#
+# usage: exit_nonzero <result-to-evaluate> <msg> <exit-code>
+exit_nonzero() {
+  result_to_evaluate=$1
+  msg=$2
+  exit_code=$3
+  if [ $result_to_evaluate -ne 0 ]; then
+    bad_msg ${msg}
+    exit ${exit_code}
+  fi
+}
+
+flavor=${1:-dev}
+
+echo "\nSetting up $flavor flavor..."
+
+# Clean up cache for generated, files, etc.
+echo "\n\nRunning fvm flutter clean..."
+time fvm flutter clean
+
+# Update dependencies based on any changes in the pubspec.yaml
+echo "\n\nRunning fvm flutter pub get..."
+time fvm flutter pub get
+exit_nonzero $? "fvm flutter pub get failed" 10
+
+# Run Build Runner
+echo "\n\nRunning flutter pub run build_runner build..."
+time fvm dart run build_runner build -d
+exit_nonzero $? "Build Runner failed" 20
+
+# Generate localization files
+echo "\n\nRunning flutter gen-l10n..."
+time fvm dart run intl_utils:generate
+exit_nonzero $? "Generate l10n failed" 30
+
+# Make sure format is good
+echo "\n\nRunning dart format ..."
+time fvm dart format .
+exit_nonzero $? "Dart Format failed" 40
+
+# Make sure code is good
+echo "\n\nRunning flutter analyze..."
+time fvm flutter analyze .
+exit_nonzero $? "Flutter Analyze failed" 50
+
+exit 0
