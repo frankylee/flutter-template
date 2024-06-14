@@ -17,11 +17,9 @@ class AppToggles {
     _client = await GBSDKBuilderApp(
       apiKey: AppConfig.growthBookApiKey,
       hostURL: AppConfig.growthBookHost,
-      sseUrl: '${AppConfig.growthBookSseUrl}/${AppConfig.growthBookApiKey}',
       backgroundSync: true,
       growthBookTrackingCallBack: (gbExperiment, gbExperimentResult) {},
     ).initialize();
-    _client.featuresFetchedSuccessfully({});
     await refresh();
   }
 

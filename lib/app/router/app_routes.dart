@@ -1,6 +1,6 @@
 enum AppRoute {
-  appUpdate('appUpdate'),
-  home('home');
+  appUpdate('app-update'),
+  home('');
 
   const AppRoute(this._path);
 
