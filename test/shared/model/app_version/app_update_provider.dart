@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template/shared/app_version/app_update_provider.dart';
+import 'package:flutter_template/shared/model/app_version/app_update_provider.dart';
 import 'package:mockito/mockito.dart';
 
 class AppUpdateNotifierMock extends AsyncNotifier<AppUpdate>

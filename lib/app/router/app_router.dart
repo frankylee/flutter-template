@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/app/router/app_routes.dart';
 import 'package:flutter_template/pages/app_update/app_update_page.dart';
 import 'package:flutter_template/pages/home/home_page.dart';
-import 'package:flutter_template/shared/app_version/app_update_provider.dart';
+import 'package:flutter_template/shared/model/app_version/app_update_provider.dart';
 import 'package:go_router/go_router.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/app/app.dart';
-import 'package:flutter_template/shared/app_version/app_update_provider.dart';
+import 'package:flutter_template/shared/model/app_version/app_update_provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../shared/app_version/app_update_provider.dart';
+import '../shared/model/app_version/app_update_provider.dart';
 
 void main() {
   group('App Update Page', () {

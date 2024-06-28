@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/app/toggle/app_toggles.dart';
-import 'package:flutter_template/shared/app_version/app_version_provider.dart';
+import 'package:flutter_template/shared/model/app_version/app_version_provider.dart';
 import 'package:version/version.dart';
 
 enum AppUpdate {
