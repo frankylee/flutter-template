@@ -14,7 +14,7 @@ analyzer:
     - '**/*.g.dart'
     - lib/app/l10n/generated/*
   errors:
-    todo: ignore
+    todo: info
 
 linter:
   rules:
