@@ -68,7 +68,7 @@ choco install fvm
 fvm use [version] [options]
 ```
 
-For example, `fvm use 3.22.2` will install the Flutter version if it has not already been downloaded and then set the current project repository to use the specified version.
+For example, `fvm use 3.27.3` will install the Flutter version if it has not already been downloaded and then set the current project repository to use the specified version.
 
 ## Global Configuration
 
@@ -80,7 +80,7 @@ Link a global Flutter version
 fvm global [version]
 ```
 
-For example, `fvm global 3.22.2` will set the Flutter version `3.22.2` as the global version on your machine.
+For example, `fvm global 3.27.3` will set the Flutter version `3.27.3` as the global version on your machine.
 
 ## Troubleshooting
 

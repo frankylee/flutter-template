@@ -18,7 +18,7 @@ class AppToggles {
       apiKey: AppConfig.growthBookApiKey,
       hostURL: AppConfig.growthBookHost,
       backgroundSync: true,
-      growthBookTrackingCallBack: (gbExperiment, gbExperimentResult) {},
+      growthBookTrackingCallBack: (data) {},
     ).initialize();
     await refresh();
   }
