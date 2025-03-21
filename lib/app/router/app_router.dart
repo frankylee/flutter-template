@@ -31,15 +31,12 @@ final _routes = [
   GoRoute(
     name: AppRoute.home.name,
     path: AppRoute.home.path,
-    pageBuilder: (context, state) => const MaterialPage(
-      child: MyHomePage(),
-    ),
+    pageBuilder: (context, state) => const MaterialPage(child: MyHomePage()),
   ),
   GoRoute(
     name: AppRoute.appUpdate.name,
     path: AppRoute.appUpdate.path,
-    pageBuilder: (context, state) => const NoTransitionPage(
-      child: AppUpdatePage(),
-    ),
+    pageBuilder:
+        (context, state) => const NoTransitionPage(child: AppUpdatePage()),
   ),
 ];

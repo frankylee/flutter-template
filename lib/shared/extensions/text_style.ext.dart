@@ -2,38 +2,26 @@ import 'package:flutter/material.dart';
 
 extension TextStyleColorExtensions on TextStyle {
   TextStyle get white {
-    return copyWith(
-      color: Colors.white,
-    );
+    return copyWith(color: Colors.white);
   }
 
   TextStyle get black {
-    return copyWith(
-      color: Colors.black87,
-    );
+    return copyWith(color: Colors.black87);
   }
 
   TextStyle primary(BuildContext context) {
-    return copyWith(
-      color: Theme.of(context).colorScheme.primary,
-    );
+    return copyWith(color: Theme.of(context).colorScheme.primary);
   }
 
   TextStyle secondary(BuildContext context) {
-    return copyWith(
-      color: Theme.of(context).colorScheme.secondary,
-    );
+    return copyWith(color: Theme.of(context).colorScheme.secondary);
   }
 
   TextStyle tertiary(BuildContext context) {
-    return copyWith(
-      color: Theme.of(context).colorScheme.tertiary,
-    );
+    return copyWith(color: Theme.of(context).colorScheme.tertiary);
   }
 
   TextStyle error(BuildContext context) {
-    return copyWith(
-      color: Theme.of(context).colorScheme.error,
-    );
+    return copyWith(color: Theme.of(context).colorScheme.error);
   }
 }

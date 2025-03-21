@@ -5,11 +5,7 @@ import 'package:flutter_template/app/toggle/app_toggles.dart';
 import 'package:flutter_template/shared/model/app_version/app_version_provider.dart';
 import 'package:version/version.dart';
 
-enum AppUpdate {
-  current,
-  hardUpdate,
-  softUpdate,
-}
+enum AppUpdate { current, hardUpdate, softUpdate }
 
 class AppUpdateNotifier extends AsyncNotifier<AppUpdate> {
   static final provider = AsyncNotifierProvider<AppUpdateNotifier, AppUpdate>(

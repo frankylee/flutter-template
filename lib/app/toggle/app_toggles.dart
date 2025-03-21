@@ -14,12 +14,13 @@ class AppToggles {
 
   /// Initialize the GrowthBook client and fetch all toggles.
   static Future<void> init() async {
-    _client = await GBSDKBuilderApp(
-      apiKey: AppConfig.growthBookApiKey,
-      hostURL: AppConfig.growthBookHost,
-      backgroundSync: true,
-      growthBookTrackingCallBack: (data) {},
-    ).initialize();
+    _client =
+        await GBSDKBuilderApp(
+          apiKey: AppConfig.growthBookApiKey,
+          hostURL: AppConfig.growthBookHost,
+          backgroundSync: true,
+          growthBookTrackingCallBack: (data) {},
+        ).initialize();
     await refresh();
   }
 

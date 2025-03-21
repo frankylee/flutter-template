@@ -12,5 +12,6 @@ class FlutterTemplateL10nEn extends FlutterTemplateL10n {
   String get appTitle => 'Flutter Demo Home Page';
 
   @override
-  String get uhOhSomethingIsWrong => 'Uh oh! Something went wrong. Please try again.';
+  String get uhOhSomethingIsWrong =>
+      'Uh oh! Something went wrong. Please try again.';
 }

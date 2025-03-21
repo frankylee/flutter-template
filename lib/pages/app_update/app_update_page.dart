@@ -14,9 +14,10 @@ class AppUpdatePage extends ConsumerWidget {
     final appVersion = ref.watch(AppUpdateNotifier.provider).requireValue;
     return Scaffold(
       appBar: CustomAppBar(
-        title: appVersion == AppUpdate.hardUpdate
-            ? 'App Update Required'
-            : 'New App Update',
+        title:
+            appVersion == AppUpdate.hardUpdate
+                ? 'App Update Required'
+                : 'New App Update',
         actions: [
           if (appVersion != AppUpdate.hardUpdate)
             IconButton(

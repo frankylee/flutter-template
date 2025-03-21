@@ -30,9 +30,7 @@ void main() {
     });
 
     group('Soft app update available', () {
-      testWidgets('shows close action in app bar', (
-        WidgetTester tester,
-      ) async {
+      testWidgets('shows close action in app bar', (WidgetTester tester) async {
         // Build our app and trigger a frame.
         await tester.pumpWidget(
           ProviderScope(
