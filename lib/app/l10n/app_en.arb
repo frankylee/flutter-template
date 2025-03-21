@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "appTitle": "Flutter Demo Home Page",
   "uhOhSomethingIsWrong": "Uh oh! Something went wrong. Please try again."
 }

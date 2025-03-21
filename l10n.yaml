@@ -1,0 +1,5 @@
+arb-dir: lib/app/l10n
+output-class: FlutterTemplateL10n
+output-localization-file: flutter_template_l10n.dart
+synthetic-package: false
+template-arb-file: app_en.arb
